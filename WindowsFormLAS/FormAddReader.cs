@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using WindowsFormLAS.Model;
 using WinFormLAS.Modell;
 
+/// MASTER
+
 namespace WindowsFormLAS
 {
     public partial class FormAddReader : Form
