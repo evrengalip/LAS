@@ -18,14 +18,14 @@ namespace WindowsFormLAS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormSetUp());
-            Application.Run(new FormMain());//ilk olarak main ekran gelsinki sürekli kullancıı adı ve şifre girmeyelim
+            //Application.Run(new FormMain());//ilk olarak main ekran gelsinki sürekli kullancıı adı ve şifre girmeyelim
 
-            /*if(IDataBasee.DataToDataTable("select * from users where active=1").Rows.Count > 0)
+            if(IDataBasee.DataToDataTable("select * from users where active=1").Rows.Count > 0)
             {
                 //kullanıcı var yani login ekranına yönlendir
                 Application.Run(new FormLogin());
             }
-            else { Application.Run(new FormSetUp()); }*/
+            else { Application.Run(new FormSetUp()); }
         }
     }
 }

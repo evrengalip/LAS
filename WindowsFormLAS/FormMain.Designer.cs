@@ -61,6 +61,7 @@
             this.btnEntrustOperation.Text = "Entrust Operations";
             this.btnEntrustOperation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEntrustOperation.UseVisualStyleBackColor = true;
+            this.btnEntrustOperation.Click += new System.EventHandler(this.btnEntrustOperation_Click);
             // 
             // btnAddBook
             // 
@@ -96,6 +97,7 @@
             this.btnStatisticts.Text = "Statistics";
             this.btnStatisticts.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStatisticts.UseVisualStyleBackColor = true;
+            this.btnStatisticts.Click += new System.EventHandler(this.btnStatisticts_Click);
             // 
             // btnSettings
             // 
@@ -111,6 +113,7 @@
             // 
             // btnLogOut
             // 
+            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.Location = new System.Drawing.Point(1466, 49);
             this.btnLogOut.Name = "btnLogOut";
@@ -119,9 +122,13 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -144,12 +151,21 @@
             // 
             // dgEntrustBooks
             // 
+            this.dgEntrustBooks.AllowUserToAddRows = false;
+            this.dgEntrustBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgEntrustBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgEntrustBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgEntrustBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgEntrustBooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgEntrustBooks.Location = new System.Drawing.Point(3, 3);
+            this.dgEntrustBooks.MultiSelect = false;
             this.dgEntrustBooks.Name = "dgEntrustBooks";
+            this.dgEntrustBooks.ReadOnly = true;
+            this.dgEntrustBooks.RowHeadersVisible = false;
             this.dgEntrustBooks.RowHeadersWidth = 62;
             this.dgEntrustBooks.RowTemplate.Height = 28;
+            this.dgEntrustBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgEntrustBooks.Size = new System.Drawing.Size(1578, 688);
             this.dgEntrustBooks.TabIndex = 1;
             // 
@@ -166,12 +182,19 @@
             // 
             // dgAvailableBooks
             // 
+            this.dgAvailableBooks.AllowUserToAddRows = false;
+            this.dgAvailableBooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgAvailableBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgAvailableBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAvailableBooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgAvailableBooks.Location = new System.Drawing.Point(3, 3);
+            this.dgAvailableBooks.MultiSelect = false;
             this.dgAvailableBooks.Name = "dgAvailableBooks";
+            this.dgAvailableBooks.ReadOnly = true;
+            this.dgAvailableBooks.RowHeadersVisible = false;
             this.dgAvailableBooks.RowHeadersWidth = 62;
             this.dgAvailableBooks.RowTemplate.Height = 28;
+            this.dgAvailableBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgAvailableBooks.Size = new System.Drawing.Size(1578, 688);
             this.dgAvailableBooks.TabIndex = 1;
             // 
@@ -188,12 +211,19 @@
             // 
             // dgReaders
             // 
+            this.dgReaders.AllowUserToAddRows = false;
+            this.dgReaders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgReaders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgReaders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgReaders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgReaders.Location = new System.Drawing.Point(3, 3);
+            this.dgReaders.MultiSelect = false;
             this.dgReaders.Name = "dgReaders";
+            this.dgReaders.ReadOnly = true;
+            this.dgReaders.RowHeadersVisible = false;
             this.dgReaders.RowHeadersWidth = 62;
             this.dgReaders.RowTemplate.Height = 28;
+            this.dgReaders.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgReaders.Size = new System.Drawing.Size(1578, 688);
             this.dgReaders.TabIndex = 0;
             // 
@@ -211,7 +241,8 @@
             this.Controls.Add(this.btnEntrustOperation);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMain";
+            this.Text = "Menus";
+            this.Activated += new System.EventHandler(this.FormMain_Activated);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

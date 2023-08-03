@@ -12,8 +12,6 @@ using System.Windows.Forms;
 using WindowsFormLAS.Model;
 using WinFormLAS.Modell;
 
-/// MASTER
-
 namespace WindowsFormLAS
 {
     public partial class FormAddReader : Form
@@ -72,10 +70,10 @@ namespace WindowsFormLAS
             parameters.Add(new SqlParameter("@schoolNumber", SqlDbType.VarChar) { Value = txtSchoolNumber.Text });
             parameters.Add(new SqlParameter("@phoneNumber", SqlDbType.VarChar) { Value = maskedPhoneNumber.Text });
             parameters.Add(new SqlParameter("@adress", SqlDbType.VarChar) { Value = txtAdress.Text });
-            parameters.Add(new SqlParameter("@id", SqlDbType.VarChar) { Value = ReaderId});
+            parameters.Add(new SqlParameter("@id", SqlDbType.Int) { Value = ReaderId});
 
 
-            IDataBasee.ExecuteNonQuery("update readers set name=@name,surname=@surname,gender=@gender,class=@class,schoolNumber=@schoolNumber,phoneNumber=phoneNumber,adress=@adress where id=@id", parameters);
+            IDataBasee.ExecuteNonQuery("update readers set name=@name,surname=@surname,gender=@gender,class=@class,schoolNumber=@schoolNumber,phoneNumber=@phoneNumber,adress=@adress where id=@id", parameters);
            
 
            
@@ -145,10 +143,11 @@ namespace WindowsFormLAS
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {==false)
-            if (ReaderId > 0)
+        {
+             
 
-            if(string.IsNullOrEmpty(txtName.Text)|| string.IsNullOrEmpty(txtName.Text)||maskedPhoneNumber.MaskFull==false)
+
+            if(ReaderId>0)
             {
                 UpdateReader();
             }

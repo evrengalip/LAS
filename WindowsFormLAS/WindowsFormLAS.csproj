@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +65,12 @@
     <Compile Include="FormEdit.Designer.cs">
       <DependentUpon>FormEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEntrust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEntrust.Designer.cs">
+      <DependentUpon>FormEntrust.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,12 @@
     <Compile Include="FormSetUp.Designer.cs">
       <DependentUpon>FormSetUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStatistics.Designer.cs">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Helper.cs" />
     <Compile Include="Model\IDataBasee.cs" />
     <Compile Include="Model\UserInfo.cs" />
@@ -96,6 +109,9 @@
     <EmbeddedResource Include="FormEdit.resx">
       <DependentUpon>FormEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEntrust.resx">
+      <DependentUpon>FormEntrust.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSetUp.resx">
       <DependentUpon>FormSetUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStatistics.resx">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
